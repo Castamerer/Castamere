@@ -1,0 +1,15 @@
+/* escape.c -- 使用转义序列*/
+/* 工资程序 */
+#include <stdio.h>
+int main(void)
+{
+	float salary;
+
+	printf("\aEnter your desired monthly salary:");			/* \a发出了一条警报声 */
+	printf(" $_______\b\b\b\b\b\b\b");						/* 七个退格字符\b使光标左移了七个位置 */
+	scanf_s("%f", &salary);
+	printf("\n\t$%.2f a month is $%.2f a year.", salary, salary * 12.0);		/* \t（水平制表符）使光标移至该行的下一个制表点*/
+	printf("\rGee!\n");										/* \r使光标回到当前行的起始处。*/
+
+	return 0;
+}
